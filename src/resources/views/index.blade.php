@@ -30,17 +30,9 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <div class="form__input--text">
-                    <input type="text" name="last_name" placeholder="例: 山田" />
-                </div>
-                <div class="form__error">
-                    <!--バリデーション機能を実装したら記述します。-->
-                </div>
-                <div class="form__input--text">
-                    <input type="text" name="first_name" placeholder="例: 太郎" />
-                </div>
-                <div class="form__error">
-                    <!--バリデーション機能を実装したら記述します。-->
+                <div class="form__name-group">
+                    <input class="form__name-input--text" type="text" name="last_name" placeholder="例: 山田" />
+                    <input class="form__name-input--text" type="text" name="first_name" placeholder="例: 太郎" />
                 </div>
             </div>
         </div>
@@ -50,7 +42,7 @@
                 <span class="form__label--item">性別</span>
                 <span class="form__label--required">※</span>
             </div>
-            <div class="form__group-content">
+            <div class="form__group-content form__radio-group">
                 <label><input type="radio" name="gender" value="1"> 男性</label>
                 <label><input type="radio" name="gender" value="2"> 女性</label>
                 <label><input type="radio" name="gender" value="3"> その他</label>
@@ -102,7 +94,8 @@
                     <input type="text" name="address" placeholder="例：東京都渋谷区千駄ヶ谷1-2-3" />
                 </div>
             </div>
-
+        </div>
+        <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">建物名</span>
             </div>
@@ -119,12 +112,13 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <select name="category_id">
-                    <option value="">選択してください</option>
-                    <option value="1">資料請求</option>
-                    <option value="2">ご質問</option>
-                    <option value="3">その他</option>
+                <select name="category_id" required>
+                    <option value="" disabled selected hidden>選択してください</option>
+                    @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->content }}</option>
+                    @endforeach
                 </select>
+
             </div>
         </div>
 

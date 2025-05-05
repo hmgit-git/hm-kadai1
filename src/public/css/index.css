@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Tagesschrift';
+    src: url('../fonts/Tagesschrift-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .contact-form__content {
     margin: 0 auto;
@@ -10,16 +16,37 @@
     text-align: center;
 }
 
+.contact-form__heading h2 {
+    font-weight: 400;
+    font-size: 32px;
+}
+
 .form {
     margin: 0 auto;
-    width: 70%;
-    text-align: center;
+    width: 800px;
+    text-align: left;
 }
 
 .form__group {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.form__group-title {
+    width: 200px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    color: #8b7969;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.form__group-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .form__label--item {
@@ -27,9 +54,8 @@
 }
 
 .form__label--required {
-    margin-left: 5px;
-    padding: 4px 6px;
-    border-radius: 3px;
+    margin-left: 8px;
+    font-size: 12px;
     color: red;
 }
 
@@ -39,14 +65,48 @@
     text-align: left;
 }
 
-.form__input--text input,
-.form__input--textarea textarea {
+.form__name-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.form__name-input--text {
+    height: 40px;
     padding: 10px;
-    width: 600px;
     border: 1px solid #ddd;
     border-radius: 3px;
+    background-color: #f5f5f5;
+    color: #333;
+    box-sizing: border-box;
+}
 
-    appearance: none;
+
+
+/* 共通スタイル */
+.form__input--text input,
+.form__input--textarea textarea,
+.form__group-content select,
+.form__input--tel-group input {
+    width: 600px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* 通常の幅（600px分）を確保したい項目だけ width: 100% を適用 */
+.form__group-content>.form__input--text,
+.form__group-content>.form__input--textarea,
+.form__group-content>select,
+.form__group-content>.form__input--tel-group {
+    width: 100%;
+}
+
+select:invalid {
+    color: #aaa;
 }
 
 .form__input--text input {
@@ -57,3 +117,59 @@
     height: 180px;
 }
 
+.form__tel-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.form__tel-group input {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+.form__tel-group span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.form__radio-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.form__radio-group label {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.form__button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    background-color: #8b7969;
+    color: #fff;
+    border: none;
+    padding: 18px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form__button-submit:hover {
+    background-color: #7a6c5e;
+    /* 少し暗めのトーンに変化 */
+}
