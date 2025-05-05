@@ -29,3 +29,81 @@ body {
     font-weight: 400;
     font-size: 40px;
 }
+
+/*モーダルのデザイン*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: transparent;
+    /* ← 元のページの背景そのまま */
+}
+.modal-window {
+    background: #ffffff;
+    border: 2px solid #8b7969;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    width: 600px;
+    padding: 30px 40px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.modal-window h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #8b7969;
+    font-weight: normal;
+}
+
+.modal-table th {
+    text-align: left;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #5f4d3f;
+    width: 30%;
+}
+
+.modal-table td {
+    padding: 8px 0;
+    color: #333;
+    word-break: break-word;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b7969;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #5f4d3f;
+}
+
+.delete-btn {
+    margin-top: 20px;
+    background-color: #c0392b;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #a93226;
+}
+

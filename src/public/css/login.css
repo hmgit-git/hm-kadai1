@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Tagesschrift';
+    src: url('../fonts/Tagesschrift-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*登録画面&ログイン画面共通*/
+.auth-form {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Tagesschrift',
+        sans-serif;
+    color: #8b7969;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8b7969;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-form button:hover {
+    background-color: #7a6c5e;
+}
+
+/*エラーメッセージ*/
+.form__error {
+    margin: 12px 0;
+    color: red;
+    font-size: 14px;
+}

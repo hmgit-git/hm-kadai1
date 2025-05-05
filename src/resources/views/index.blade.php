@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<a href="/login" class="login-button">Login</a>
 
 <div class="contact-form__content">
     <div class="contact-form__heading">

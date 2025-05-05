@@ -173,3 +173,30 @@ select:invalid {
     background-color: #7a6c5e;
     /* 少し暗めのトーンに変化 */
 }
+
+.form__error {
+    margin: 12px 0;
+    color: red;
+    font-size: 14px;
+}
+
+/*ログインボタン*/
+.login-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #8b7969;
+    color: #fff;
+    padding: 10px 16px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #a5907d;
+}
+/**/
+

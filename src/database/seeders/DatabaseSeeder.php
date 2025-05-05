@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CategorySeeder::class,
         ]);
+
+        \App\Models\Contact::factory()->count(10)->create();
     }
 }
