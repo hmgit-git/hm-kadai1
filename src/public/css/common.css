@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Tagesschrift';
+    src: url('../fonts/Tagesschrift-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Tagesschrift', sans-serif;
+    color: #8b7969;
+}
+
+.header {
+    background: none;
+    text-align: center;
+
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #8b7969;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 24px;
+}
