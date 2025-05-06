@@ -16,9 +16,10 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/">
-                FashionablyLate
-            </a>
+            <a class="header__logo" href="/">FashionablyLate</a>
+
+            {{-- ★ここに右上ボタン枠を設置（ログイン・登録ページだけ使う） --}}
+            @yield('auth-header-button')
         </div>
     </header>
 

@@ -39,7 +39,8 @@
 
         <div class="search-row second-row">
             <div class="left">
-                <a href="{{ route('admin.export') }}" class="export-btn">エクスポート</a>
+                <a href="{{ route('admin.export') }}" class="export-btn">CSV</a>
+                <a href="{{ route('admin.export.excel') }}" class="export-btn">Excel</a>
             </div>
             <div class="right">
                 {{ $contacts->links() }}

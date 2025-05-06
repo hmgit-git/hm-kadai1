@@ -8,11 +8,17 @@ use App\Models\Category;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $categories = Category::all();
-        return view('index', compact('categories'));
+
+        if ($request->isMethod('post')) {
+            return redirect()->route('contacts.index')->withInput();
+        }
+
+        return view('contacts.index', compact('categories'));
     }
+
 
     public function store(Request $request)
     {
@@ -86,11 +92,11 @@ class ContactController extends Controller
         ]);
 
         // 問い合わせ確認画面へ
-        return view('contacts.confirm', ['inputs' => $request->all()]);
+        return view('contacts.confirm', ['input' => $request->all()]);
     }
 
     public function thanks()
     {
-        return view('thanks');
+        return view('contacts.thanks');
     }
 }
