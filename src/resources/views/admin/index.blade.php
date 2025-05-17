@@ -18,11 +18,12 @@
             <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください">
 
             <select name="gender">
-                <option value="">性別</option>
-                <option value="1">男性</option>
-                <option value="2">女性</option>
-                <option value="3">その他</option>
+                <option value="">全て</option>
+                <option value="1" {{ request('gender') == '1' ? 'selected' : '' }}>男性</option>
+                <option value="2" {{ request('gender') == '2' ? 'selected' : '' }}>女性</option>
+                <option value="3" {{ request('gender') == '3' ? 'selected' : '' }}>その他</option>
             </select>
+
 
             <select name="category_id">
                 <option value="">お問い合わせの種類</option>
@@ -39,8 +40,9 @@
 
         <div class="search-row second-row">
             <div class="left">
-                <a href="{{ route('admin.export') }}" class="export-btn">CSV</a>
-                <a href="{{ route('admin.export.excel') }}" class="export-btn">Excel</a>
+                <a href="{{ route('admin.export', request()->query()) }}" class="export-btn">CSV</a>
+                <a href="{{ route('admin.export.excel', request()->query()) }}" class="export-btn">Excel</a>
+
             </div>
             <div class="right">
                 {{ $contacts->links() }}

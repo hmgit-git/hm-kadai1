@@ -91,10 +91,10 @@ return [
     'mimes' => 'The :attribute must be a file of type: :values.',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
-        'numeric' => 'The :attribute must be at least :min.',
-        'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
-        'array' => 'The :attribute must have at least :min items.',
+        'numeric' => ':attributeは:min以上で入力してください。',
+        'file' => ':attributeは:min KB以上のファイルでなければなりません。',
+        'string' => ':attributeは:min文字以上で入力してください。',
+        'array' => ':attributeは:min個以上でなければなりません。',
     ],
     'multiple_of' => 'The :attribute must be a multiple of :value.',
     'not_in' => 'The selected :attribute is invalid.',
@@ -144,6 +144,12 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
+        ],
+    ],
+
+    'custom' => [
+        'password' => [
+            'min' => 'パスワードは8文字以上で入力してください。',
         ],
     ],
 
