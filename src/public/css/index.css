@@ -59,12 +59,6 @@
     color: red;
 }
 
-.form__error {
-    height: 20px;
-    color: #ff0000;
-    text-align: left;
-}
-
 .form__name-group {
     display: flex;
     gap: 10px;
@@ -172,9 +166,16 @@ select:invalid {
 }
 
 .form__error {
-    margin: 12px 0;
+    display: block;
+    width: 100%;
     color: red;
     font-size: 14px;
+    margin-top: 4px;
+    margin-left: 0;
+}
+
+.tel-input {
+    width: 100px !important;
 }
 
 /*ログインボタン*/

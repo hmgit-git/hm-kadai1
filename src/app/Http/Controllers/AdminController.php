@@ -56,7 +56,7 @@ class AdminController extends Controller
     public function destroy($id)
     {
         Contact::findOrFail($id)->delete();
-        return redirect()->route('admin')->with('message', '削除しました');
+        return redirect()->route('admin.index')->with('message', '削除しました');
     }
 
     public function export()

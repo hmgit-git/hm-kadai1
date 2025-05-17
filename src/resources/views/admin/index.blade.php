@@ -113,11 +113,13 @@
                     <td id="modal-detail"></td>
                 </tr>
             </table>
-            <form id="deleteForm" method="POST" action="">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="delete-btn">削除</button>
-            </form>
+            <div style="text-align: center;">
+                <form id="deleteForm" method="POST" action="">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="delete-btn">削除</button>
+                </form>
+            </div>
         </div>
     </div>
 
